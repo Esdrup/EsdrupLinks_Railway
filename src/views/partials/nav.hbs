@@ -1,0 +1,52 @@
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        
+        <a class="navbar-brand text-white" href="/"><img src="/img/EsdrupLogoMain3.png" alt="Esdrup-Andre Salcedo Junco" id="esdrupLogo" class="d-inline">EsdrupLinks <h6 class="d-inline" id="beta">beta</h6></a>
+        
+        <div class="ml-auto " id="navbarNav">
+            <ul class="navbar-nav">
+                {{#if user}}
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle text-white" href="/links" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                        <strong>Links</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark ">
+                        <li><a class="dropdown-item" href="/uni">Mis Cursos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/links">Mis links</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/links/add">Crear link</a></li>
+                    </ul>
+                </li>
+                {{!-- <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle text-white" href="/friends" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false" id="soon-container">
+                        <strong>Amigos</strong>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark ">
+                        <li><a class="dropdown-item" href="/friends">Amigos</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/solicitudes">Solicitudes</a></li>
+                    </ul>
+                </li> --}}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                        <img src="{{user.imgUser}}" id="imageperfil">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/logout">Salir</a></li>
+                    </ul>
+                </li>
+                {{else}}
+                <li class="nav-item">
+                    <a href="/signin" class="nav-link text-white">Ingresa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/signup" class="nav-link text-white"><strong>Registrate</strong></a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</nav>
